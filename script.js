@@ -349,3 +349,6 @@ const debouncedScroll = debounce(() => {
 }, 10);
 
 window.addEventListener("scroll", debouncedScroll);
+
+// Set current year in footer
+document.getElementById("currentYear").textContent = new Date().getFullYear();
