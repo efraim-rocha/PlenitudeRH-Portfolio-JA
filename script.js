@@ -7,10 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navbar scroll effect
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 650) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
+    const aboutSection = document.getElementById("about");
+    if (aboutSection) {
+      const aboutTop = aboutSection.offsetTop;
+      if (window.scrollY >= aboutTop) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
     }
   });
 
