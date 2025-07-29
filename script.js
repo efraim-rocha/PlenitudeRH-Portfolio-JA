@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Navbar scroll effect
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 650) {
       navbar.classList.add("scrolled");
     } else {
       navbar.classList.remove("scrolled");
@@ -232,55 +232,6 @@ document.addEventListener("DOMContentLoaded", () => {
       hero.style.transform = `translateY(${rate}px)`;
     }
   });
-
-  // Counter animation for stats
-  function animateCounter(element, target, duration = 2000) {
-    let start = 0;
-    const increment = target / (duration / 16);
-
-    function updateCounter() {
-      start += increment;
-      if (start < target) {
-        element.textContent =
-          Math.floor(start) +
-          (element.textContent.includes("+") ? "+" : "") +
-          (element.textContent.includes("%") ? "%" : "");
-        requestAnimationFrame(updateCounter);
-      } else {
-        element.textContent =
-          target +
-          (element.textContent.includes("+") ? "+" : "") +
-          (element.textContent.includes("%") ? "%" : "");
-      }
-    }
-
-    updateCounter();
-  }
-
-  // Initialize counter animations when stats come into view
-  const statsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const statNumbers = entry.target.querySelectorAll(".stat h3");
-          statNumbers.forEach((stat) => {
-            const text = stat.textContent;
-            const number = Number.parseInt(text.replace(/\D/g, ""));
-            if (number) {
-              animateCounter(stat, number);
-            }
-          });
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-
-  const heroStats = document.querySelector(".hero-stats");
-  if (heroStats) {
-    statsObserver.observe(heroStats);
-  }
 
   // Form validation
   function validateForm(form) {
