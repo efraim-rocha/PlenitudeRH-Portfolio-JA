@@ -183,8 +183,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Intersection Observer for animations
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
+    threshold: 0,
+    rootMargin: "0px 0px 5px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -201,40 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   animateElements.forEach((el) => {
     observer.observe(el);
-  });
-
-  // Typing effect for hero title
-  function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = "";
-
-    function type() {
-      if (i < text.length) {
-        element.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, speed);
-      }
-    }
-
-    type();
-  }
-
-  // Initialize typing effect for hero title
-  const heroTitle = document.querySelector(".hero-title");
-  if (heroTitle) {
-    const originalText = heroTitle.innerHTML;
-    // Uncomment the line below to enable typing effect
-    // typeWriter(heroTitle, originalText, 50);
-  }
-
-  // Parallax effect for hero section
-  window.addEventListener("scroll", () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector(".hero");
-    if (hero) {
-      const rate = scrolled * -0.5;
-      hero.style.transform = `translateY(${rate}px)`;
-    }
   });
 
   // Form validation
