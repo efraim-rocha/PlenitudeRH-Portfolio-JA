@@ -863,7 +863,7 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 800px) {
+@media (max-width: 890px) {
   .hero {
     padding-top: 125px;
   }
