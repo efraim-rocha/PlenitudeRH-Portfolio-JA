@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
+  const imgs = document.querySelectorAll(".gallery-img");
+  const dots = document.querySelectorAll(".dot");
+  const prev = document.querySelector(".gallery-prev");
+  const next = document.querySelector(".gallery-next");
 
   // Navbar scroll effect
   window.addEventListener("scroll", () => {
@@ -70,6 +74,63 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Gallery
+  let current = 0;
+  let autoSlide;
+
+  function show(idx) {
+    imgs.forEach((img, i) => {
+      img.classList.remove("active", "fadeout");
+      if (i === current) {
+        img.classList.add("fadeout");
+        setTimeout(() => img.classList.remove("fadeout"), 500);
+      }
+      if (i === idx) img.classList.add("active");
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === idx);
+    });
+    current = idx;
+  }
+
+  function nextImage() {
+    let idx = (current + 1) % imgs.length;
+    show(idx);
+  }
+
+  function startAutoSlide() {
+    autoSlide = setInterval(nextImage, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  prev.addEventListener("click", () => {
+    stopAutoSlide();
+    let idx = (current - 1 + imgs.length) % imgs.length;
+    show(idx);
+    startAutoSlide();
+  });
+
+  next.addEventListener("click", () => {
+    stopAutoSlide();
+    let idx = (current + 1) % imgs.length;
+    show(idx);
+    startAutoSlide();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      stopAutoSlide();
+      show(i);
+      startAutoSlide();
+    });
+  });
+
+  show(current);
+  startAutoSlide();
 
   // Contact form handling
   const contactForm = document.getElementById("contactForm");
