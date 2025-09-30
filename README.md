@@ -8,7 +8,7 @@ O projeto tem como objetivo transmitir credibilidade, destacar serviços ofereci
 
 ## 📷 Preview
 
-![Preview PlenitudeRH](assets/images/PreviewPlenitudeRH.gif)
+<img src="assets/images/PreviewPlenitudeRH.gif" alt="Preview PlenitudeRH" width="800"/>
 
 ## 🛠️ Tecnologias Utilizadas
 
