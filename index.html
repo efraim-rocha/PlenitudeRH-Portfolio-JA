@@ -668,17 +668,6 @@
                     headers: { Accept: "application/json" },
                     body: JSON.stringify(data),
                   })
-                    .then((response) => {
-                      if (response.ok) {
-                        alert("Mensagem enviada com sucesso!");
-                        this.reset();
-                      } else {
-                        alert("Erro ao enviar mensagem. Tente novamente.");
-                      }
-                    })
-                    .catch(() => {
-                      alert("Erro ao enviar mensagem. Tente novamente.");
-                    });
                 });
             </script>
           </div>
