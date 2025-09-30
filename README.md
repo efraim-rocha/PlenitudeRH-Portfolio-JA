@@ -6,13 +6,9 @@ O **PlenitudeRH** é um site institucional desenvolvido para apresentar a consul
 
 O projeto tem como objetivo transmitir credibilidade, destacar serviços oferecidos, apresentar clientes e depoimentos, além de facilitar o contato com potenciais clientes.
 
----
-
 ## 📷 Preview
 
 <img src="assets/images/PreviewPlenitudeRH.gif" alt="Preview PlenitudeRH" width="800"/>
-
----
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -22,8 +18,6 @@ O projeto tem como objetivo transmitir credibilidade, destacar serviços ofereci
 - **Formspree** → Integração do formulário de contato
 - **Font Awesome** → Ícones
 - **Google Fonts (Inter)** → Tipografia
-
----
 
 ## ⚙️ Recursos Técnicos
 
@@ -40,8 +34,6 @@ O projeto tem como objetivo transmitir credibilidade, destacar serviços ofereci
 
 - **Acessibilidade**
   - Foco visível em elementos interativos
-
----
 
 ## 🎨 Principais Funcionalidades
 
@@ -109,8 +101,6 @@ Quatro áreas de atuação estratégicas:
 - Créditos ao desenvolvedor (**Efraim Silva**)
 - Ano atualizado dinamicamente via JavaScript
 
----
-
 ## 🚀 Como Executar o Projeto
 
 Entre no site: [PlenitudeRH](https://plenituderh.netlify.app)
@@ -126,8 +116,6 @@ OU
    cd plenitude-rh
    ```
 3. Abra o arquivo `index.html` diretamente no navegador.
-
----
 
 ## 👩‍💼 Autoria
 
