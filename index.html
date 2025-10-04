@@ -3,18 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PlenitudeRH • Consultoria em Gestão de Pessoas e RH Estratégico</title>
+    <title>Plenitude RH • Consultoria em Gestão de Pessoas e RH Estratégico</title>
 
   <!-- Meta descrição -->
   <meta name="description"
-        content="A PlenitudeRH oferece consultoria estratégica em gestão de pessoas, desenvolvimento de lideranças e cultura organizacional. Transforme seu RH com propósito." />
+        content="A Plenitude RH oferece consultoria estratégica em gestão de pessoas, desenvolvimento de lideranças e cultura organizacional. Transforme seu RH com propósito." />
 
   <!-- Meta robots (permitir indexação e seguir links) -->
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / compartilhamento social -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PlenitudeRH • Consultoria em Gestão de Pessoas" />
+  <meta property="og:title" content="Plenitude RH • Consultoria em Gestão de Pessoas" />
   <meta property="og:description"
         content="Consultoria em RH com foco estratégico, cultura organizacional e liderança." />
   <meta property="og:url" content="https://plenituderh.netlify.app/" />
@@ -23,7 +23,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="PlenitudeRH • Consultoria em RH" />
+  <meta name="twitter:title" content="Plenitude RH • Consultoria em RH" />
   <meta name="twitter:description"
   content="RH estratégico, gestão de pessoas e desenvolvimento de lideranças." />
   <meta name="twitter:image" content="https://plenituderh.netlify.app/assets/image/profile-jaqueline.jpeg" />
@@ -33,7 +33,7 @@
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "PlenitudeRH",
+    "name": "Plenitude RH",
     "description": "Consultoria estratégica em gestão de pessoas, liderança e cultura organizacional.",
     "url": "https://plenituderh.netlify.app/",
     "logo": "https://plenituderh.netlify.app/assets/image/profile-jaqueline.jpeg",
@@ -66,7 +66,7 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <div class="nav-logo">
-          <h2>PlenitudeRH</h2>
+          <h2>Plenitude RH</h2>
           <span>Gestão de Pessoas com estratégia e impacto real</span>
         </div>
         <ul class="nav-menu" id="nav-menu">
@@ -98,7 +98,7 @@
             <span class="highlight">Resultados</span>
           </h1>
           <p class="hero-subtitle">
-            A <strong>PlenitudeRH</strong> é especialista em promover excelência
+            A <strong>Plenitude RH</strong> é especialista em promover excelência
             em Gestão de Pessoas. Com foco em estratégias eficazes,
             impulsionamos transformações reais e sustentáveis nas organizações.
             <br /><br />
@@ -147,7 +147,7 @@
                 >a verdadeira transformação precisa ir além dos limites da
                 organização</strong
               >. <br /><br />
-              Assim nasceu a <strong>PlenitudeRH</strong> — uma consultoria
+              Assim nasceu a <strong>Plenitude RH</strong> — uma consultoria
               dedicada a promover evolução humana e organizacional com
               profundidade, propósito e impacto real. <br /><br />
               Como Psicóloga, acredito que o desenvolvimento começa de dentro
@@ -179,7 +179,7 @@
         <div class="section-header">
           <h2>Serviços Estratégicos</h2>
           <p>
-            Na PlenitudeRH, entendemos que cada organização é única. Por isso,
+            Na Plenitude RH, entendemos que cada organização é única. Por isso,
             oferecemos soluções personalizadas, alinhadas às necessidades
             específicas de cada cliente. Atuamos com agilidade, qualidade e
             comprometimento em todas entregas
@@ -384,7 +384,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Clientes Associados</h2>
-          <p>Conheça algumas empresas que confiam na PlenitudeRH</p>
+          <p>Conheça algumas empresas que confiam na Plenitude RH</p>
         </div>
         <div class="clients-slider" id="clientsSlider">
           <div class="slider-track">
@@ -455,7 +455,7 @@
           <h2>Galeria de Fotos</h2>
           <p>
             Inspire-se com projetos, eventos e conquistas realizados pela
-            PlenitudeRH.
+            Plenitude RH.
           </p>
         </div>
         
@@ -597,7 +597,7 @@
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Seu Nome"
+                  placeholder="Seu Nome *"
                   required
                 />
               </div>
@@ -606,9 +606,34 @@
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Seu Email"
+                  placeholder="Seu Email *"
                   required
                 />
+              </div>
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Seu Telefone"
+                  maxlength="15"
+                  oninput="phoneMask(this)"
+                />
+                <script>
+                  function phoneMask(input) {
+                  let v = input.value.replace(/\D/g, "");
+                  if (v.length > 11) v = v.slice(0, 11);
+                  if (v.length > 10) {
+                    input.value = v.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+                  } else if (v.length > 5) {
+                    input.value = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, "($1) $2-$3");
+                  } else if (v.length > 2) {
+                    input.value = v.replace(/^(\d{2})(\d{0,5})$/, "($1) $2");
+                  } else {
+                    input.value = v;
+                  }
+                  }
+                </script>
               </div>
               <div class="form-group">
                 <input
@@ -640,7 +665,7 @@
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Conte-me sobre seu desafio..."
+                  placeholder="Conte-me sobre seu desafio... *"
                   rows="5"
                   required
                 ></textarea>
@@ -658,6 +683,7 @@
                   const data = {
                     name: formData.get("name"),
                     email: formData.get("email"),
+                    telefone: formData.get("phone"),
                     company: formData.get("company"),
                     service: formData.get("service"),
                     message: formData.get("message"),
@@ -679,7 +705,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <h3>PlenitudeRH</h3>
+            <h3>Plenitude RH</h3>
             <p>Gestão de Pessoas com estratégia e impacto real</p>
           </div>
           <div class="footer-links">
@@ -710,7 +736,7 @@
         </div>
         <div class="footer-bottom">
           <p>
-            &copy; <span id="currentYear"></span> PlenitudeRH - Gestão de
+            &copy; <span id="currentYear"></span> Plenitude RH - Gestão de
             Pessoas com estratégia e impacto real. Feito com 💖 por
             <a href="https://www.linkedin.com/in/efraimrocha/" class="dev"
               >Efraim Silva</a
