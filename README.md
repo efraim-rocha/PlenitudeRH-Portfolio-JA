@@ -53,24 +53,14 @@ O projeto tem como objetivo transmitir credibilidade, destacar serviços ofereci
 ### 👤 Sobre
 
 - Trajetória profissional da consultora
-- Ênfase em qualificações acadêmicas e propósito
 
 ### 🛎️ Serviços
 
-Quatro áreas de atuação estratégicas:
-
-1. **Consultoria em RH** (R&S, políticas, planejamento)
-2. **Otimização de Performance** (KPIs, treinamentos, clima)
-3. **Liderança & Desenvolvimento Humano** (mentoria, soft skills, PDL)
-4. **Cultura & Diversidade** (inclusão, saúde mental, pertencimento)
+Quatro áreas de atuação estratégicas
 
 ### 🌎 Visão
 
-- Pilares estratégicos da consultoria:
-  - **Resultados**
-  - **Inovação Humana**
-  - **Liderança com Propósito**
-  - **Cultura Organizacional**
+- Pilares estratégicos da consultoria
 - Animações com **Intersection Observer**
 
 ### 💬 Depoimentos
@@ -80,7 +70,7 @@ Quatro áreas de atuação estratégicas:
 
 ### 🏢 Clientes
 
-- Carrossel automático com logos de empresas parceiras (PUC Minas, Prosegur, Synergia, entre outras)
+- Carrossel automático com logos de empresas parceiras
 
 ### 🖼️ Galeria
 
@@ -89,7 +79,7 @@ Quatro áreas de atuação estratégicas:
 
 ### 📬 Contato
 
-- Informações de contato: **E-mail, WhatsApp e LinkedIn**
+- Informações de contato com links de redirecionamento: **E-mail, WhatsApp e LinkedIn**
 - **Formulário de contato** com validação de campos
 - Integração com **Formspree** para recebimento de mensagens
 - Sistema de **notificações personalizadas**
