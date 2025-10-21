@@ -133,9 +133,14 @@ p {
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 80px;
+}
+
+.nav-container .company-logo img {
+  height: 60px;
+  width: auto;
+  margin: 10px;
 }
 
 .nav-logo h2 {
@@ -154,6 +159,7 @@ p {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -782,9 +788,14 @@ section {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 35px 2fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 2rem;
+}
+
+.footer-content .company-logo img {
+  height: 70px;
+  width: auto;
 }
 
 .footer-brand h3 {
@@ -863,7 +874,7 @@ section {
 }
 
 /* Responsive Design */
-@media (max-width: 890px) {
+@media (max-width: 925px) {
   .hero {
     padding-top: 125px;
   }
@@ -899,7 +910,13 @@ section {
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
-
+  /* coloca o ícone do hamburger no fim da linha (lado direito) */
+  .nav-container {
+    justify-content: space-between;
+  }
+  .hamburger {
+    margin-left: auto;
+  }
   .hamburger.active span:nth-child(1) {
     transform: translateY(9px) rotate(45deg);
   }
@@ -970,6 +987,10 @@ section {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+  }
+
+  .footer-content .company-logo img {
+    margin-bottom: -35px;
   }
 
   section {
